@@ -1,0 +1,132 @@
+// File Shape.java
+public abstract class Shape
+
+{
+private double b,h;
+public Shape()
+
+{
+
+b=h=0;
++
+
+public Shape(double b)
+{
+
+this.b = b;
+h =b;
+
+}
+public Shape(double b, double h)
+{
+
+this.b = b;
+this.h = h;
+
+public abstract double area();
+public double getH()
+{
+
+return h;
+}
+public double getB()
+{
+return b;
+
+}
+}
+
+//File Rectangle.java
+class Rectangle extends Shape
+
+double a;
+
+public Rectangle()
+{
+}
+
+//default constructor
+
+public Rectangle (double length, double breadth) //parameterized constructor
+5 per(lenath, breadth); //call to parameterized constructor of shape class
+public double area() // method to calculate and return area of rectangle
+5 (getB() * getH() );
+
+return a;
+
++
+//File Triangle.java
+public class Triangle extends Shape
+
+double a;
+public Triangle()
+{ //default constructor
+
+public Triangle (double base, double height) //parameterized constructor
+
+super(base,height); //call to parameterized constructor of shape class
+public double area() // method to calculate and return area of rectangle
+
+a = ( (getB() * getH() ) ) / 2;
+
+return a;
+
+}
+
++
+//File TestShape.java
+import java.util. Scanner;
+public class TestShape
+
+{
+public static void main(String args[]) //main method
+{
+double a,b;
+Scanner sc=new Scanner(System.in);
+int x; //switch case variable
+Shape s; //reference variable of super class shape
+do
+{
+
+System.out.printin("\t1.Triangle\n\t2.Rectangle \n\t3.Exit\n\tChoice:");
+xX = sc.nextInt();
+switch(x)
+
+{
+
+case 1: //area of triangle by parameterized constructor
+
+System.out.print("Enter base of triangle: ");
+a = sc.nextDouble(); //read dimension 1 from user
+System.out.print("Enter height of triangle: ");
+b = sc.nextDouble(); //read dimension 2 from user
+s = new Triangle(a,b);
+//reference variable of shape and object type of triangle
+System.out.printin("Area of Triangle =: "+ s.area() );
+break;
+
+case 2: //area of rectangle by default constructor
+System.out.print("Enter length of Rectangle: ");
+a = sc.nextDouble(); //read dimension 1 from user
+System.out.print("Enter height of Rectangle: ");
+b = sc.nextDouble(); //read dimension 2 from user
+s = new Rectangle(a,b);
+//reference variable of shape and object type of Rectangle
+System.out.printin("Area of Rectangle =: "+ s.area() );
+break;
+case 3: //Exit
+System.out.printin(" Program closed ");
+System.exit(0);
+
+default: //default case
+System.out.printin(" Invalid choice... ");
+
++
+}while(x != 3); //loop breaks when input x=3
+sc.close(); //closing of scanner class
+
++
+
+Conclusion:
+We have studied concept of abstract class, abstract method and dynamic dispatch in java
+
